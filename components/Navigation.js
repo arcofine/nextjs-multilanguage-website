@@ -3,22 +3,23 @@ import Link from "next/link";
 const Navigation = ({ locale, locales, defaultLocale }) => {
   const resolveHome = {
     en: "Home",
-    es: "Página principal",
+    fr: "Accueil",
   };
   const resolveAbout = {
     en: "About",
-    es: "Acerca",
+    fr: "Notre Organisation",
   };
   
   const defaultRoot = locale === defaultLocale ? "/" : `/${locale}/`;
   return (
-    <header className="w-full bg-white">
+    <header className="w-full bg-grey">
       <nav className="" role="navigation">
         <div className="container mx-auto p-4 flex flex-wrap items-center md:flex-no-wrap">
           <div className="mr-4 md:mr-8">
             <Link href="/">
               <a>
-                <svg width="69" height="66" xmlns="http://www.w3.org/2000/svg">
+                <img src="/assets/logo/logo.png" />
+               {/*  <svg width="69" height="66" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <path fill="#FFF" d="M-149-98h1440v938H-149z" />
                     <path
@@ -30,14 +31,14 @@ const Navigation = ({ locale, locales, defaultLocale }) => {
                       fill="#FFF"
                     />
                   </g>
-                </svg>
+                </svg> */}
               </a>
             </Link>
           </div>
-          <div className="text-black">
+          {/* <div className="text-black">
             <p className="text-lg">Storyblok</p>
             <p>NextJS Demo</p>
-          </div>
+          </div> */}
           <div className="ml-auto md:hidden">
             <button
               className="flex items-center px-3 py-2 border rounded"
